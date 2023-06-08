@@ -53,8 +53,10 @@ if (isOutdated(lastFetch)) {
     }
  }
 };
-
 export const getProfessions = () => (state) => state.professions.entities;
+export function getProfession(id, professions) {
+  return professions.find((p) => p._id === id);
+}
 
 export const getProfessionsLoadingStatus = () => (state) => state.professions.isLoading;
 
